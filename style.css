@@ -1,0 +1,451 @@
+/* all paragraphs within html and 
+apply properties within these brackets */
+p {
+    color:rgb(255, 155, 171); 
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+/* additional css rules */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(254, 239, 217);
+}
+
+h1 {
+    position: relative;
+    font-size: 24px;
+    color:lightpink;
+    font-family:'Montserrat';
+    text-align: left;
+    margin-left: 50px;
+    font-weight: 700;
+    
+}
+
+.index h1 {
+    padding-top:150px;
+    font-size:50px;
+    
+}
+
+#intro {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    max-width:200px;
+    width:50%;
+    height:auto;
+}
+
+.index a {
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+    font-size: 15px;
+    color: lightpink;
+    cursor: pointer;
+    
+}
+
+a:hover {
+    color:hotpink;
+}
+
+/*SIDE NAVIGATION*/
+
+.sidenav {
+    display: block;
+    height:100%;
+    width:270px;
+    position: fixed;
+    top: 0; /*fixes it to the top*/
+    left: 0;
+    background-color: rgb(254, 239, 217);
+    overflow: hidden; /*disable horizontal scroll*/
+    padding-top: 30px;
+    padding-left:75px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0px;
+    width: 150px;
+}
+
+.indent a{
+    margin-left: 8px;
+}
+
+.sidenav a {
+    padding: 8px 8px;
+    font-size:16px;
+    text-decoration: none;
+    color:lightpink;
+    display:block;
+    cursor: pointer;
+    text-align:left;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:500;
+    transition: all 0.3s;
+}
+
+.sidenav a:hover {
+    color:hotpink;
+}
+
+.sidenav .active {
+    color:hotpink;
+}
+
+.sidenav #intro {
+    margin-left:-25px;
+    margin-bottom: -15px;
+    margin-right: -10px;
+    width:auto;
+    height: auto;
+    padding-bottom: 0;
+}
+
+.sidenav #intro:hover {
+    opacity: 0.9;
+    transition: .4s ease;
+}
+
+/*social media icons*/
+.singleCol {
+    max-width: 150px;
+    margin: 0 auto;
+    padding-bottom: 75px;
+}
+
+.social-media-icons-black a {
+    color: rgb(52, 46, 46);
+    cursor:pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+}
+
+/*HOVERING STUFF*/
+.social-media-icons-black:hover > *{
+    opacity: .5;
+}
+.social-media-icons-black:hover > *:hover{
+    opacity: 1;
+    color: palevioletred;
+}
+
+
+/*HOME PAGE*/
+
+.page {
+    margin-left:270px; /*same as width of the sidebar*/
+    padding:0px 10px;
+    width:auto;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
+
+.page h1 {
+    padding-top: 200px;
+}
+
+.page p {
+    margin-left: 40px;
+}
+
+.about h1 {
+    padding-bottom:15px;
+}
+
+.about p {
+    padding-bottom: 20px;
+}
+
+/*RESUME ON ABOUT PAGE*/
+.about #resume{
+    width:70%;
+    max-width:1600px;
+    height:auto;
+    margin-left:40px;
+}
+
+/*ART GALLERY----------------------------*/
+.art {
+    padding-top:20px;
+}
+.gallery {
+    line-height:0;
+    -webkit-column-count:3;
+    -webkit-column-gap:8px;
+    -moz-column-count:3;
+    -moz-column-gap:8px;
+    column-count:3;
+    column-gap:5px;
+
+}
+
+.gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px;
+    transition:.2s;
+}
+
+/* FOR WHEN I WANT TO DO EXPANSIONS
+.gallery img:hover {
+    opacity: .9;
+}
+*/
+
+/*TECH---------------------------------------*/
+.tech h3 {
+    font-size: 18px;
+    color:rgb(227, 128, 161);
+    margin-left:40px;
+    font-family:'Montserrat';
+    text-align: left;
+    
+}
+
+.tech ul {
+    list-style-type:disc;
+    color:rgb(227, 128, 161);
+    margin-left: 60px;
+    padding: 0px;
+    width: 150px;
+}
+
+.tech a {
+    padding: 8px 8px;
+    font-size:16px;
+    text-decoration: none;
+    color:lightpink;
+    display:block;
+    cursor: pointer;
+    text-align:left;
+    transition: all 0.3s;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.tech a:hover {
+    color:rgba(255, 182, 193, 0.521);
+}
+
+.topnav {
+    display:none;
+}
+
+/*thin window*/
+@media (max-width:1400px) {
+    .gallery {
+        -moz-column-count:2;
+        -webkit-column-count:2;
+        column-count:2;
+    }
+}
+
+@media (max-width:1000px) {
+    .gallery {
+        -moz-column-count:1;
+        -webkit-column-count:1;
+        column-count:1;
+    }
+}
+
+@media (max-width:800px) {
+    .sidenav {
+        display: inline;
+        height:130px;
+        width:100%;
+        position: fixed;
+        top: 0; /*fixes it to the top*/
+        left: 0;
+        background-color: rgb(254, 239, 217);
+        overflow: hidden; /*disable horizontal scroll*/
+        padding-top: 30px;
+        padding-left:75px;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0px;
+        width: 100%;
+    }
+    
+    .sidenav ul li {
+        float: left;
+        
+        padding-right: 20px;
+    }
+
+    .sidenav a {
+        padding: 8px 8px;
+        font-size:16px;
+        text-decoration: none;
+        color:lightpink;
+        display:block;
+        cursor: pointer;
+        text-align:left;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight:500;
+        transition: all 0.3s;
+    }
+    
+    .sidenav #intro {
+        display:inline-block;
+        margin-left:-25px;
+        margin-bottom: 0;
+        margin-right: 0;
+        width:auto;
+        padding-right: 10px;
+        height: 80px;
+        padding-bottom: 0;
+    }
+
+    .page {
+        margin-left:30px; /*same as width of the sidebar*/
+        padding:0px 10px;
+        width:auto;
+        margin-top: 150px;
+        padding-bottom: 80px;
+        overflow-x: hidden;
+    }
+}
+
+/*small screen w dropdow menu fuck be*/
+/**@media (max-width: 900px) {
+    .page {
+        margin-left:0; 
+        padding:0px 10px;
+        width:100%;
+        padding-bottom: 80px;
+        z-index: 0;
+        overflow-x: hidden;
+        position:static;
+        
+        transition: margin .5s;
+    }
+
+
+    .topnav {
+        display:block;
+        background-color:palevioletred;
+        position:fixed;
+        z-index: 1;
+        top: -250px;;
+        left:0;
+        right:0;
+        width:100%;
+        height:250px;
+        padding:20px;
+        overflow:hidden;
+    }
+
+    .topnav ul {
+        list-style-type: none;
+        margin-left: auto;
+        margin-right:auto;
+        padding-left: 0px;
+        width: 150px;
+        margin-top: 20px;
+    }
+    
+    .indent a{
+        margin-left: 8px;
+    }
+    
+    .topnav a {
+        padding: 8px 8px;
+        font-size:20px;
+        text-decoration: none;
+        color:lightpink;
+        display:block;
+        cursor: pointer;
+        margin-bottom:15px;
+        text-align:center;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight:500;
+        transition: all 0.3s;
+    }
+
+    
+
+    .sidenav {
+        display:none;
+    }
+
+    .nav {
+        position:fixed;
+        width: auto;
+        display: inline-block;
+        border:none;
+    }
+
+    .navbutton {
+        position:fixed;
+        cursor:pointer;
+        top: 0;
+        right: 0;
+        padding:10px;
+        background: transparent;
+      width: 100px;
+      padding: 8px 10px;
+      color: palevioletred;
+      line-height:20px;
+      font-size:12px;
+      text-align:center;
+      z-index: 2;
+      cursor: pointer;
+        margin:20px 50px;
+    }
+
+    @keyframes showNav {
+        from {
+          top: -250px;
+        }
+        to {
+          top: 0;
+        }
+      }
+
+    .showNav {
+        animation: showNav 1s ease forwards;
+    }
+
+    @keyframes hideNav {
+        from {
+          top: 0;
+        }
+        to {
+          top: -250px;
+        }
+    }
+
+    .hideNav {
+        animation: hideNav 1s ease forwards;
+    }
+
+}**/
+
+/*#image name {
+    width: 300px;
+    width: 50%; will set img width relative to browser body width
+    height: auto;
+
+}*/
+
+/* should always come after regular css rules and group sequentially
+500 px-media query comes before 400 px media query*/
+@media only screen and (max-width: 400px) {
+    /*#image name {
+        width: 300px;
+    }*/
+    /*once the screen is 400 px wide or smaller, reduce img width to 300 px*/
+}
