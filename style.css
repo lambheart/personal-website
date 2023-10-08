@@ -19,10 +19,14 @@ h1 {
     font-size: 24px;
     color:lightpink;
     font-family:'Montserrat';
-    text-align: left;
-    margin-left: 50px;
+    text-align: center;
     font-weight: 700;
     
+}
+
+.page h1 {
+    text-align: left;
+    margin-left: 50px;
 }
 
 .index h1 {
