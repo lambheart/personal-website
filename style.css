@@ -21,6 +21,7 @@ h1 {
     font-family:'Montserrat';
     text-align: center;
     font-weight: 700;
+    z-index: -100;
     
 }
 
@@ -272,7 +273,7 @@ a:hover {
         background-color: rgb(254, 239, 217);
         overflow: hidden; /*disable horizontal scroll*/
         padding-top: 30px;
-        padding-left:75px;
+        padding-left:50px;
     }
 
     .sidenav ul {
@@ -307,15 +308,16 @@ a:hover {
         margin-bottom: 0;
         margin-right: 0;
         width:auto;
-        padding-right: 10px;
+        padding-right: 20px;
         height: 80px;
         padding-bottom: 0;
     }
 
     .page {
-        margin-left:30px; /*same as width of the sidebar*/
+        margin-left:auto; /*same as width of the sidebar*/
+        margin-right: auto;
         padding:0px 10px;
-        width:auto;
+        width:90%;
         margin-top: 150px;
         padding-bottom: 80px;
         overflow-x: hidden;
