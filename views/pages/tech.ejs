@@ -44,6 +44,16 @@
                     i can't use github pages for this website anymore.
                 </li>
             </ul>
+
+            <div class = "blogposts">
+                <% posts.forEach(function(post) {%>
+                    <div class = "post">
+                        <h3><%= post.title %></h3>
+                        <p><%= post.date %></p>
+                        <p><%= post.content %></p>
+                    </div>
+                <% }); %>
+            </div>
         </div>
     </body>
 </html>
