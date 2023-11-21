@@ -8,33 +8,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="scripts.js"></script>
         <link rel="icon" type="image/x-icon" href="img/icon.png">
     </head>
     <body>
-        <!--side navigation-->
-        <div class="sidenav">
-            <ul>
-                <li><a href="./main" class="active"><img id="intro" src="img/logo.png"></a></li>
-                <br>
-                <li><a href="./about">about</a></li>
-                <li><a href="./art" class="active">art</a></li>
-                <li><a href="./tech">tech</a></li>
-            </ul>
-        </div>
-
-        <!--<div class="topnav">
-            <ul>
-                <li><a href="about.html">about</a></li>
-                <li><a href="about.html">art</a></li>
-                <li><a href="about.html">tech</a></li>
-            </ul>
-        </div>
-
-        <div class="nav">
-            <button class = "navbutton"><span class="buttontxt">menu</span></button>
-        </div>-->
+        <%- include('../partials/header') %>
+        
         <!--page content-->
         <div class="art page">
             <div class="gallery">
