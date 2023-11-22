@@ -3,13 +3,13 @@ var express = require('express');
 const ejs = require('ejs');
 var mysql = require('mysql2');
 var dotenv = require('dotenv').config();
+var helper = require('./functions/helper');
 
 //list of posts
 var posts = [];
 
 const setPosts = (rows) => {
     posts = rows;
-    console.log(posts);
 }
 
 var con = mysql.createConnection({
@@ -18,8 +18,7 @@ var con = mysql.createConnection({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DB,
     keepAliveInitialDelay: 10000, 
-    enableKeepAlive: true,
-    dateStrings: true
+    enableKeepAlive: true
 })
 
 con.connect(function(err) {
@@ -80,7 +79,8 @@ app.get('/art', function (req, res) {
 // tech route
 app.get('/tech', function (req, res) {
     res.render('pages/tech', {
-        posts: posts
+        posts: posts,
+        helper: helper
     });
 });
 

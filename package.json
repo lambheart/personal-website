@@ -19,6 +19,7 @@
     "has-flag": "^4.0.0",
     "jake": "^10.8.7",
     "minimatch": "^3.1.2",
+    "moment": "^2.29.4",
     "mysql2": "^3.6.4",
     "supports-color": "^7.2.0"
   },

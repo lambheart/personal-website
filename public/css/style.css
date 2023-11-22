@@ -215,28 +215,66 @@ a:hover {
     margin-left:40px;
     font-family:'Montserrat';
     text-align: left;
+    padding-bottom: 30px;
     
 }
 
-.tech ul {
-    list-style-type:disc;
-    color:rgb(227, 128, 161);
-    margin-left: 60px;
-    padding: 0px;
+.blogposts {
+    border-bottom: 1px solid;
+    border-color:indianred;
+    width: 80%;
+    margin-left: 8%;
+    margin-right: auto;
     
-    margin-right:15%;
 }
 
-.tech li {
-    padding: 8px 8px;
+.post {
+    border-top: 1px solid;
+    border-color:indianred;
+    border-bottom:none;
+    width: 100% !important;
+    height: 150px !important;
+    cursor:pointer;
+    transition:.2s ease-in-out;
+}
+
+.post:hover {
+    background-color:rgb(254, 230, 209);
+}
+
+.post h3 {
+    color:rgba(80, 58, 61, 0.521);
+    padding-bottom: 0;
     font-size:16px;
-    text-decoration: none;
-    color:lightpink;
-    display:block;
-    cursor: pointer;
+    margin-left: 15px;
     text-align:left;
-    transition: all 0.3s;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top:30px;
+    line-height: 30px;
+    vertical-align:bottom;
+}
+
+
+.date {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    float: right;
+    line-height: 30px;
+    vertical-align:bottom;
+    margin-right:15px;
+}
+
+.content {
+    font-size: 16px;
+    color: rgb(255, 125, 145);
+    overflow: hidden;
+    padding-top:15px;
+    margin-left:-15px;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    max-width: 30ch;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 .tech a:hover {
