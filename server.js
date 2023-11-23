@@ -21,15 +21,7 @@ var con = mysql.createConnection({
     enableKeepAlive: true
 })
 
-con.connect(function(err) {
-    if (err) {
-        return console.error('error: ' + err.message);
-    }
-
-    console.log("Connected to MySQL server");
-
-
-});
+helper.initCon(con);
 
 let sql = "SELECT * FROM blogposts ORDER BY id DESC";
 
@@ -41,13 +33,7 @@ con.query(sql, (error, rows, fields) => {
     setPosts(rows);
 });
 
-con.end(function(err) {
-    if (err) {
-        return console.error('error: ' + err.message);
-    }
-
-    console.log("Close connection to MySQL server");
-});
+helper.endCon(con);
 
 
 
@@ -84,4 +70,45 @@ app.get('/tech', function (req, res) {
     });
 });
 
-//error handler
+var post;
+
+const setPost = (result) => {
+    post = result[0];
+    console.log(post);
+    console.log(post.title)
+}
+
+//blog posts in tech
+app.get('/tech/:postId', function(req,res) {
+    console.log(req.params.postId);
+
+    con = mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DB,
+        keepAliveInitialDelay: 10000, 
+        enableKeepAlive: true
+    })
+
+    helper.initCon(con);
+
+    con.query('SELECT * FROM blogposts WHERE id = ?', [req.params.postId], (error, result, fields) => {
+        if (error) {
+            return console.error(error.message);
+        }
+        setPost(result);
+        res.render('pages/blogpage', {
+            post: post,
+            helper: helper
+        });
+    });
+
+    helper.endCon(con);
+
+});
+
+// 404 error handler
+app.get('*', function(req,res) {
+    res.render('pages/index');
+});
