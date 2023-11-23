@@ -73,7 +73,7 @@ app.get('/tech', function (req, res) {
 var post;
 
 const setPost = (result) => {
-    post = result[0];
+    post = result;
     console.log(post);
     console.log(post.title)
 }
@@ -81,30 +81,12 @@ const setPost = (result) => {
 //blog posts in tech
 app.get('/tech/:postId', function(req,res) {
     console.log(req.params.postId);
-
-    con = mysql.createConnection({
-        host: process.env.DB_HOST,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASSWORD,
-        database: process.env.DB_DB,
-        keepAliveInitialDelay: 10000, 
-        enableKeepAlive: true
-    })
-
-    helper.initCon(con);
-
-    con.query('SELECT * FROM blogposts WHERE id = ?', [req.params.postId], (error, result, fields) => {
-        if (error) {
-            return console.error(error.message);
-        }
-        setPost(result);
-        res.render('pages/blogpage', {
-            post: post,
-            helper: helper
-        });
+    setPost(posts.find(o => o.id === +(req.params.postId)));
+    
+    res.render('pages/blogpage', {
+        post: post,
+        helper: helper
     });
-
-    helper.endCon(con);
 
 });
 
