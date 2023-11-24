@@ -22,10 +22,8 @@
         <div class = "blog page">
             <p class = "backbutton"><a href= '/tech' >back</a></p>
             <h1><%= post.title %><span class= "date"><%= helper.getDateFormat(post.date) %></span></h1>
-            <p class="blurb full"><%= post.blurb %></p>
-
-            <hr>
-
+            <p class="blurb"><%= post.blurb %></p>
+            <div class="blogborder"></div>
             <p class = "content"><%= post.content %></p>
         </div>
     </body>
