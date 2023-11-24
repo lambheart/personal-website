@@ -239,7 +239,7 @@ a:hover {
     border-color:indianred;
     border-bottom:none;
     width: 100% !important;
-    height: 150px !important;
+    height: 170px !important;
     cursor:pointer;
     transition:.2s ease-in-out;
 }
@@ -248,7 +248,7 @@ a:hover {
     background-color:rgb(254, 230, 209);
 }
 
-.post h3 {
+.title h3 {
     color:rgba(80, 58, 61, 0.521);
     padding-bottom: 0;
     font-size:16px;
@@ -283,14 +283,29 @@ a:hover {
     font-size: 16px;
     color: rgb(255, 125, 145);
     overflow: hidden;
-    padding-top:15px;
-    margin-left:-15px;
-    white-space: nowrap;
-    text-overflow:ellipsis;
+    padding:15px;
     max-width: 100%;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    margin-bottom: 0;
+}
+
+.full {
+    border-bottom: 1px solid;
+    border-color:indianred;
+}
+
+.reduced h3 {
+    margin-top: 5px;
+    padding-top: 0 ;
+    margin-left: 20px;
+}
+
+.readtime{
+    font-size: 12px ;
+    color:lightpink;
+    line-height: 15px ;
+    vertical-align:auto;
 }
 
 .content {

@@ -34,9 +34,18 @@ function initCon(con) {
     });
 }
 
+function readingTime(text) {
+    const wpm = 200;
+    const words = text.trim().split(/\s+/).length;
+    const time = Math.ceil(words/wpm);
+
+    return time;
+}
+
 module.exports = {
     getDateFormat: getDateFormat,
     getPostPage: getPostPage,
     endCon: endCon,
-    initCon: initCon
+    initCon: initCon,
+    readingTime, readingTime
 }
