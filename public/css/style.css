@@ -69,6 +69,7 @@ a:hover {
     position: fixed;
     top: 0; /*fixes it to the top*/
     left: 0;
+    z-index: 1;
     background-color: rgb(254, 239, 217);
     overflow: hidden; /*disable horizontal scroll*/
     padding-top: 30px;
@@ -80,10 +81,6 @@ a:hover {
     margin: 0;
     padding-left: 0px;
     width: 150px;
-}
-
-.indent a{
-    margin-left: 8px;
 }
 
 .sidenav a {
@@ -156,12 +153,17 @@ a:hover {
 }
 
 .page h1 {
-    padding-top: 200px;
+    padding-top: 20%;
 }
 
 .page p {
     margin-left: 40px;
     margin-right:10%;
+}
+
+.about {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
 }
 
 .about h1 {
@@ -209,6 +211,10 @@ a:hover {
 */
 
 /*TECH---------------------------------------*/
+.tech {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
+}
 .tech h3 {
     font-size: 18px;
     color:rgb(227, 128, 161);
@@ -253,6 +259,16 @@ a:hover {
     vertical-align:bottom;
 }
 
+/**BLOG PAGE-----------------------------------*/
+.blog {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
+}
+
+.blog h1 {
+    margin-left: 30px;
+}
+
 
 .date {
     font-family: 'Montserrat';
@@ -263,7 +279,7 @@ a:hover {
     margin-right:15px;
 }
 
-.content {
+.blurb {
     font-size: 16px;
     color: rgb(255, 125, 145);
     overflow: hidden;
@@ -271,10 +287,45 @@ a:hover {
     margin-left:-15px;
     white-space: nowrap;
     text-overflow:ellipsis;
-    max-width: 30ch;
+    max-width: 100%;
     text-align: left;
     font-family: Georgia, 'Times New Roman', Times, serif;
     
+}
+
+.content {
+    font-size: 16px;
+    color: rgb(255, 125, 145);
+    overflow: hidden;
+    padding-top:15px;
+    margin-left:-15px;
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.backbutton {
+    padding: 8px 8px;
+    font-size:16px;
+    position:absolute;
+    top: 150px;
+    left: 280px;
+    text-align:left;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:500;
+    transition: all 0.3s;
+    z-index: 0;
+}
+
+.backbutton a{
+    text-decoration: none;
+    color:lightpink;
+    cursor: pointer;
+}
+
+.backbutton a:hover {
+    color:hotpink;
 }
 
 .tech a:hover {
@@ -351,6 +402,18 @@ a:hover {
         padding-right: 20px;
         height: 80px;
         padding-bottom: 0;
+    }
+
+    .backbutton {
+        padding: 8px 8px;
+        font-size:16px;
+        position:absolute;
+        top: 150px;
+        left: auto;
+        text-align:left;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight:500;
+        transition: all 0.3s;
     }
 
     .page {

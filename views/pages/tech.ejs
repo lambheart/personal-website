@@ -35,7 +35,7 @@
                     <div class = "post" onclick = "window.location='/tech/<%=post.id %>'">
                         <h3><%= post.title %> <span class = 'date'><%= helper.getDateFormat(post.date) %></span></h3>
                         
-                        <p class = "content"><%= post.content %></p>
+                        <p class = "blurb"><%= post.blurb %></p>
                     </div>
                 <% }); %>
             </div>
