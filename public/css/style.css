@@ -69,6 +69,7 @@ a:hover {
     position: fixed;
     top: 0; /*fixes it to the top*/
     left: 0;
+    z-index: 1;
     background-color: rgb(254, 239, 217);
     overflow: hidden; /*disable horizontal scroll*/
     padding-top: 30px;
@@ -80,10 +81,6 @@ a:hover {
     margin: 0;
     padding-left: 0px;
     width: 150px;
-}
-
-.indent a{
-    margin-left: 8px;
 }
 
 .sidenav a {
@@ -156,12 +153,17 @@ a:hover {
 }
 
 .page h1 {
-    padding-top: 200px;
+    margin-top: 210px;
 }
 
 .page p {
     margin-left: 40px;
     margin-right:10%;
+}
+
+.about {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
 }
 
 .about h1 {
@@ -209,34 +211,137 @@ a:hover {
 */
 
 /*TECH---------------------------------------*/
+.tech {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
+}
 .tech h3 {
     font-size: 18px;
     color:rgb(227, 128, 161);
     margin-left:40px;
     font-family:'Montserrat';
     text-align: left;
+    padding-bottom: 30px;
     
 }
 
-.tech ul {
-    list-style-type:disc;
-    color:rgb(227, 128, 161);
-    margin-left: 60px;
-    padding: 0px;
+.blogposts {
+    border-bottom: 1px solid;
+    border-color:indianred;
+    width: 80%;
+    margin-left: 8%;
+    margin-right: auto;
     
-    margin-right:15%;
 }
 
-.tech li {
+.post {
+    border-top: 1px solid;
+    border-color:indianred;
+    border-bottom:none;
+    width: 100% !important;
+    height: 170px !important;
+    cursor:pointer;
+    transition:.2s ease-in-out;
+}
+
+.post:hover {
+    background-color:rgb(254, 230, 209);
+}
+
+.title h3 {
+    color:rgba(80, 58, 61, 0.521);
+    padding-bottom: 0;
+    font-size:16px;
+    margin-left: 15px;
+    text-align:left;
+    margin-top:30px;
+    line-height: 30px;
+    vertical-align:bottom;
+}
+
+/**BLOG PAGE-----------------------------------*/
+.blog {
+    margin-left:300px; /*same as width of the sidebar*/
+    margin-right: 100px;
+}
+
+.blog h1 {
+    margin-left: 30px;
+}
+
+
+.date {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    float: right;
+    line-height: 30px;
+    vertical-align:bottom;
+    margin-right:15px;
+}
+
+.blurb {
+    font-size: 16px;
+    color: rgb(255, 125, 145);
+    overflow: hidden;
+    padding:15px;
+    max-width: 100%;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 0;
+}
+
+.blogborder {
+    border-bottom: 1px solid;
+    border-color:indianred;
+    width:100%;
+    padding-top: 5px;
+}
+
+.reduced h3 {
+    margin-top: 10px;
+    padding-top: 0 ;
+    margin-left: 20px;
+}
+
+.readtime{
+    font-size: 12px ;
+    color:lightpink;
+    line-height: 15px ;
+    vertical-align:auto;
+}
+
+.content {
+    font-size: 16px;
+    color: rgb(255, 125, 145);
+    overflow: hidden;
+    padding-top:30px;
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.backbutton {
     padding: 8px 8px;
     font-size:16px;
+    position:absolute;
+    top: 150px;
+    left: 280px;
+    text-align:left;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:500;
+    transition: all 0.3s;
+    z-index: 0;
+}
+
+.backbutton a{
     text-decoration: none;
     color:lightpink;
-    display:block;
     cursor: pointer;
-    text-align:left;
-    transition: all 0.3s;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.backbutton a:hover {
+    color:hotpink;
 }
 
 .tech a:hover {
@@ -313,6 +418,22 @@ a:hover {
         padding-right: 20px;
         height: 80px;
         padding-bottom: 0;
+    }
+
+    .backbutton {
+        padding: 8px 8px;
+        font-size:16px;
+        position:absolute;
+        top: 150px;
+        left: auto;
+        text-align:left;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight:500;
+        transition: all 0.3s;
+    }
+
+    .page h1{
+        margin-top: 60px;
     }
 
     .page {

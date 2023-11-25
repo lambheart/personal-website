@@ -1,0 +1,9 @@
+<div class="sidenav">
+    <ul>
+        <li><a href="./"><img id="intro" <%if(active=="blog"){%>src="../img/logo.png"><%} else {%>src="img/logo.png"><%}%></a></li>
+        <br>
+        <li><a <%if(active=="about"){%>class="active"<%}%> href="./about">about</a></li>
+        <li><a <%if(active=="art"){%>class="active"<%}%> href="./art">art</a></li>
+        <li><a <%if(active=="tech" || active=="blog"){%>class="active"<%}%> href="./tech">tech</a></li>
+    </ul>
+</div>
