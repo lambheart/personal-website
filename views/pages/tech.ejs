@@ -20,29 +20,87 @@
         
         <!--page content-->
         <div class="tech page">
+        
             <h1>WHAT'S SHE DOING RIGHT NOW?!</h1>
-            <p>i recently participated in the technica hackathon at umd, where we built a gamified website about environmentalism! i drew lots of stuff for it, and learned some react</p>
 
-            <p>independently, i'm working on seeing how polarized the US Supreme Court is, using AI! </p>
+            <div class = "projects portion">
+                <div class = "project-card rounded">
+                    <h3>AI Research</h3>
+                    <div class = "tag">
+                        <p>Python, Pandas</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>researching whether ML models are able to detect polarization in the US supreme court</li>
+                            <li>used logistic regression and tree based classification models</li>
+                            <li>models are given court cases, political direction of ruling, and the ideological scores of their court compositions based on:</li>
+                            <ul>
+                                <li>the party of the president who nominated the justice</li>
+                                <li><a href= "https://en.wikipedia.org/wiki/Martin%E2%80%93Quinn_score">martin-quinn scores</a></li>
+                                <li><a href= "https://michaelbailey.georgetown.domains/bridge-ideal-points-2020/">bailey's bridge ideal points</a></li>
+                            </ul>
+                            <li>i organized 4 datasets into one, containing tens of thousands of entries</li>
+                        </ul>
+                    </div>
+                </div>
 
-            <p>other than that, i'm probably working on improving this site, or doing leetcode T_T</p>
+                <div class = "project-card rounded">
+                    <h3>Full Stack Personal Website</h3>
+                    <div class = "tag">
+                        <p>Nodejs, Express, MySQL, Docker, AWS, HTML, CSS</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>developed a full-stack, responsive portfolio website with Nodejs, Express, and MySQL as a relational database</li>
+                            <li>utilized EJS to fetch and display dynamic content for blog page</li>
+                            <li>learned docker to create containers and images to deploy using aws</li>
+                            <li>previously static html and css website</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "project-card rounded">
+                    <h3>Full Stack Study Spot Finder - CheeseHacks 2023</h3>
+                    <div class = "tag">
+                        <p>Reactjs, SQL, Google Maps API, Heroku, HTML, CSS</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>developed a full-stack, campus study spot website with React app, Python, and MySQL as a relational database</li>
+                            <li>i was responsible for: </li>
+                                <ul>
+                                    <li>implementing the Google Maps API</li>
+                                    <li>creating all the files for the react app</li>
+                                    <li>html and css</li>
+                                </ul>
+                            <li>now i'm trying to implement a submissions page, as well as a website for moderating submissions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class = "portion">
+                <p>i recently participated in the technica hackathon at umd, where we built a gamified website about environmentalism! i drew lots of stuff for it, and learned some react</p>
 
-            <br>
+                <p>independently, i'm working on seeing how polarized the US Supreme Court is, using AI! </p>
+
+                <p>other than that, i'm probably working on improving this site, or doing leetcode T_T</p>
+            </div>
+            <div class = "portion">
             <h3>keep track with me!</h3>
             
-            <div class = "blogposts">
-                <% posts.forEach(function(post) {%>
-                    <div class = "post" onclick = "window.location='/tech/<%=post.id %>'">
-                        <div class = "title">
-                            <h3><%= post.title %> <span class = 'date'><%= helper.getDateFormat(post.date) %></span></h3>
+                <div class = "blogposts">
+                    <% posts.forEach(function(post) {%>
+                        <div class = "post" onclick = "window.location='/tech/<%=post.id %>'">
+                            <div class = "title">
+                                <h3><%= post.title %> <span class = 'date'><%= helper.getDateFormat(post.date) %></span></h3>
+                            </div>
+                            
+                            <p class = "blurb"><%= post.blurb %></p>
+                            <div class = "reduced">
+                                <h3><span class = "readtime"><%= helper.readingTime(post.content) %> minute read</span></h3>
+                            </div>
                         </div>
-                        
-                        <p class = "blurb"><%= post.blurb %></p>
-                        <div class = "reduced">
-                            <h3><span class = "readtime"><%= helper.readingTime(post.content) %> minute read</span></h3>
-                        </div>
-                    </div>
-                <% }); %>
+                    <% }); %>
+                </div>
             </div>
         </div>
     </body>
