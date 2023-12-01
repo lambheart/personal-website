@@ -267,6 +267,10 @@ a:hover {
     margin-bottom: 0;
 }
 
+.project-card .singleCol {
+    padding-bottom: 10px;
+}
+
 .reduced h3 {
     padding-bottom: 0;
 
