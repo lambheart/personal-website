@@ -49,7 +49,10 @@ app.listen(8080);
 // *** GET Routes - display pages ***
 // Root Route
 app.get('/', function (req, res) {
-    res.render('pages/index');
+    res.render('pages/index', {
+        posts: posts,
+        helper: helper
+    });
 });
 
 // about route
@@ -62,14 +65,6 @@ app.get('/art', function (req, res) {
     res.render('pages/art');
 });
 
-// tech route
-app.get('/tech', function (req, res) {
-    res.render('pages/tech', {
-        posts: posts,
-        helper: helper
-    });
-});
-
 var post;
 
 const setPost = (result) => {
@@ -79,7 +74,7 @@ const setPost = (result) => {
 }
 
 //blog posts in tech
-app.get('/tech/:postId', function(req,res) {
+app.get('/:postId', function(req,res) {
     console.log(req.params.postId);
     setPost(posts.find(o => o.id === +(req.params.postId)));
     
