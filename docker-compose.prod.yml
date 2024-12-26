@@ -1,10 +1,6 @@
 version: "3"
 services:
-  node-app:
-    build:
-      context: .
-      args:
-        NODE_ENV: production
+  personal-website-app:
     environment:
       - NODE_ENV=production
     command: node server.js

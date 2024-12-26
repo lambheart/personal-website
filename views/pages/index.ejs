@@ -13,18 +13,114 @@
         <link rel="icon" type="image/x-icon" href="img/icon.png">
     </head>
     <body>
+        <!--side navigation LARGE-->
         <%- include('../partials/header', {active: "index"}); %>
         
+        <script src="https://kit.fontawesome.com/6c318dd0be.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
         <!--page content-->
-        <div class="art page">
-            <div class="gallery">
-                <img src="img/the_shark.jpg">
-                <img src= "img/rubegetta.jpg">
-                <img src= "img/vegetta1.jpg">
-                <img src= "img/vegetta2.jpg">
-                <img src= "img/vegetta3.jpg">
-                <img src= "img/vegetta4.jpg">
-                <img src= "img/miguel.jpg">
+        <div class="tech page">
+        
+            <h1>Projects</h1>
+
+            <div class = "projects portion">
+                <div class = "project-card rounded">
+                    <h3>Analyzing LLM-generated Synthetic Data for Imbalanced Datasets - CS561 Fall 2024</h3>
+                    <div class = "tag">
+                        <p>Jupyter, Python</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>Conducted in-depth analysis on data quality and classification performance of LLM-generated synthetic data for rebalancing imbalanced datasets.</li>
+                            <li>Authored a research paper showcasing findings, providing actionable insights into the benefits and drawbacks of synthetic data creation methods in machine learning pipelines.</li>
+                            <li>Designed and executed experiments on logistic regression models using medical datasets.</li>
+                            <li>Created various graphs to analyze the distribution of zero-shot and few-shot prompting synthetic data.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class = "project-card rounded">
+                    <h3>xv6 Fast Filesystem - CS537 Fall 2024</h3>
+                    <div class = "tag">
+                        <p>C</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>Implemented a C-based filesystem using FUSE (Filesystem in Userspace), resembling FFS or ext2. This fileesystem also integrates striping, mirroring, and verified mirroring capabilities from RAID 0 and RAID 1.</li>
+                            <li>Designed a program to initialize a file to an empty filesystem for mounting, and then callback functions for various filesystem operations.</li>
+                        </ul>
+                    </div>
+                    <div class="singleCol social-media-icons-black d-flex justify-content-evenly">
+                        <a href ="https://drive.google.com/file/d/1lHNaopxzLFMmSQxx4bz3A0DylCfVMLFA/view?usp=sharing" target="_blank" rel="noreferrer noopener">
+                            <i class="fab fa-google-drive"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class = "project-card rounded">
+                    <h3>Full Stack Personal Website</h3>
+                    <div class = "tag">
+                        <p>Javascript, MySQL, Docker, AWS, HTML, CSS</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>Developed a full-stack, responsive portfolio website with Nodejs, Express, and MySQL as a relational database.</li>
+                            <li>Utilized EJS to fetch and display dynamic content for blog page.</li>
+                            <li>Used docker to create containers and images to deploy using AWS.</li>
+                        </ul>
+                    </div>
+                    <div class="singleCol social-media-icons-black d-flex justify-content-evenly">
+                        <a href ="https://github.com/lambheart/personal-website" target="_blank" rel="noreferrer noopener">
+                            <i class="fa-brands fa-github-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class = "project-card rounded">
+                    <h3>Full Stack Study Spot Finder - CheeseHacks 2023</h3>
+                    <div class = "tag">
+                        <p>Reactjs, SQL, Google Maps API, Heroku, HTML, CSS</p>  
+                    </div>
+                    <div class = "blurb">
+                        <ul>
+                            <li>Developed a full-stack, campus study spot website with React app, Python, and MySQL as a relational database</li>
+                            <li>I was responsible for: </li>
+                                <ul>
+                                    <li>Implementing the Google Maps API</li>
+                                    <li>Creating all pages and files for the react app</li>
+                                    <li>UI design</li>
+                                </ul>
+                        </ul>
+                    </div>
+                    <!--MEDIA ICONS-->
+                    <div class="singleCol social-media-icons-black d-flex justify-content-evenly">
+                        <a href ="https://github.com/lambheart/badgerburrow" target="_blank" rel="noreferrer noopener">
+                            <i class="fa-brands fa-github-alt"></i>
+                        </a>
+                        <!--
+                            <a href = "https://badgerburrow.lambheart.pink" target="_blank" rel="noreferrer noopener">
+                                <i class="fa-solid fa-link"></i>
+                            </a>
+                        -->
+                    </div>
+                </div>
+            </div>
+            <h3>Keep track with me!</h3>
+            
+                <div class = "blogposts">
+                    <% posts.forEach(function(post) {%>
+                        <div class = "post" onclick = "window.location='/<%= post.id %>'">
+                            <div class = "title">
+                                <h3><%= post.title %> <span class = 'date'><%= helper.getDateFormat(post.date) %></span></h3>
+                            </div>
+                            
+                            <p class = "blurb"><%= post.blurb %></p>
+                            <div class = "reduced">
+                                <h3><span class = "readtime"><%= helper.readingTime(post.content) %> minute read</span></h3>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
             </div>
         </div>
     </body>
